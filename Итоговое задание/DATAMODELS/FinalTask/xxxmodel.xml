@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by LEGO (LEGO) -->
+<FORM_DESCRIPTION xmlns="http://www.cognitive.ru/XML/2001/ctform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cognitive.ru/XML/2001/ctform  ctform.xsd" name="FinalTask">
+  <CONTENT_MODEL dfattchfiles="|Document|files" dfnumberdoc="|Document|Число_регномера" key="Key">
+    <E name="Key" datatype="integer" index="false" default="&quot;1&quot;" view="invisible" displayname="Ключ" dfprotected="true" />
+    <E name="ИД_последний_редактор" datatype="text" index="true" displayname="ИД последний редактор" dfhidden="true" view="invisible" />
+    <E name="Имя_последний_редактор" datatype="text" index="true" displayname="Имя последний редактор" dfhidden="true" view="invisible" />
+    <S name="Document" displayname="Документ" use="LLot">
+      <E displayname="Регистрационный номер" name="Регистрационный_номер" datatype="text(249)" index="true" dfprotected="true" dfhidden="true" />
+      <E displayname="Префикс рег. номера" name="Префикс_регномера" datatype="dictionary(Prefix,text)" edit="combobox(Prefix)" index="true" view="invisible" dfprotected="false" />
+      <E displayname="Порядковый рег. номер" name="Число_регномера" datatype="integer(+1..)" index="true" view="invisible" dfprotected="true" required="true" />
+      <E displayname="Суффикс рег. номера" name="Суффикс_регномера" datatype="dictionary(Suffix,text)" edit="combobox(Suffix)" dfprotected="false" index="true" view="invisible" />
+      <E displayname="Дата регистрации" name="Дата_регистрации" datatype="date" edit="" index="true" dfprotected="true" required="true" esp="false" default="nowdate()" />
+      <E displayname="Вид документа" name="Вид_документа" datatype="dictionary(VidDocNames,text)" index="true" dfprotected="true" required="false" edit="combobox" value="&quot;Лот&quot;" view="invisible" />
+      <E displayname="Краткое содержание" name="Краткое_содержание" datatype="longtext" euflag="7" index="true" dfprotected="true" required="false" edit="multiline" awindex="true" default="&quot;Лот&quot;" view="invisible" value="&quot;Лот: &quot; +  Наименование_лота +  &quot;, способ закупки: &quot; + Способ_закупки + &quot;, плановая дата размещения:&quot; + Плановая_дата_размещения + &quot;, НМЦ &quot; + НМЦ_с_НДС " />
+      <E displayname="Имя потока" name="Имя_потока" datatype="text" index="false" view="invisible" dfprotected="true" dfhidden="true" esp="false" />
+      <E displayname="ИД потока" name="ИД_потока" datatype="integer" index="false" dfprotected="true" dfhidden="false" esp="false" view="invisible" />
+      <E displayname="ИД регистратора" name="ИД_регистратора" datatype="integer" index="false" dfprotected="true" dfhidden="false" esp="false" view="invisible" />
+      <E name="header" datatype="text" index="false" value="&quot;Лот&quot; " />
+      <E name="subheader" datatype="text" index="false" view="invisible" />
+      <E displayname="Регистрационный номер" name="Регистрационный_номер_1" datatype="text" index="true" />
+      <E name="Статус" datatype="text" index="true" edit="textbox" required="true" default="Новый" />
+      <E displayname="Дата создания" name="Дата_создания" datatype="date" index="true" default="nowdate()" />
+      <E displayname="Редакция" name="Редакция" datatype="integer" index="true" />
+      <E displayname="ФИО отвественного" name="ФИО_ответсвенного" datatype="text" index="true" />
+      <E displayname="Группа" name="Группа" datatype="text" />
+      <E displayname="Дополнительная информация" name="Дополнительная_информация" datatype="longtext" index="true" />
+      <E displayname="Логическое поле 1" name="Логическое_поле_1" datatype="boolean" index="true" />
+      <E displayname="Стоимость" name="Стоимость" datatype="integer" index="true" />
+      <E displatname="Налог, %" name="Налог" datatype="integer" index="true" />
+      <E displayname="Числовое поле 4" name="Числовое_поле_4" datatype="integer" index="true" />
+      <A displayname="Таблица 1" name="Таблица_1">
+        <S name="S1">
+          <E displayname="Колонка 1" name="Колонка_1" datatype="text" index="true" />
+          <E displayname="Колонка 2" name="Колонка_2" datatype="text" index="true" />
+          <E displayname="Колонка 3" name="Колонка_3" datatype="integer" index="true" />
+        </S>
+      </A>
+      <E displayname="Логическое поле 2" name="Логическое_поле_2" datatype="boolean" index="true" />
+      <E displayname="Логическое поле 3" name="Логическое_поле_3" datatype="boolean" index="true" />
+      <S name="Согласующий">
+        <E name="Согласующий" datatype="integer" index="true" abdata="Id" extype="addressbook" displayname="Согласующий" />
+        <E name="Согласующий_ФИО" datatype="text" index="true" edit="tool(CallTools.AddressBookTool)" extype="addressbook" absettings="&lt;ROOT title=&quot;Адресная книга&quot; IsMultiple=&quot;False&quot; CanSelectNobody=&quot;False&quot; SelectedUser=&quot;True&quot; SelectedGroup=&quot;False&quot; SelectedDepartments=&quot;False&quot;&gt;&lt;DateDictionary Name=&quot;Persons&quot; DisplayName=&quot;Пользователи&quot; /&gt;&lt;DateDictionary Name=&quot;Departments&quot; DisplayName=&quot;Структура предприятия&quot; /&gt;&lt;/ROOT&gt;" abdata="Name" />
+      </S>
+      <E displayname="Текстовое поле 5" name="Текстовое_поле_5" datatype="text" index="true" />
+      <E displayname="Дата 3" name="Дата_3" datatype="date" index="true" />
+      <E displayname="Категория" name="Категория" datatype="text" index="true" />
+      <E displayname="Комментарий" name="Комментарий" datatype="longtext" index="true" />
+      <E name="Родительский_признак" datatype="boolean" index="true" />
+      <E name="Планируемый_год" datatype="integer" index="true" displayname="Планируемый год" />
+    </S>
+  </CONTENT_MODEL>
+  <plugins></plugins>
+</FORM_DESCRIPTION>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary Name="Группы" Type="0">
+  <Items>
+    <Dictionary Name="Группы">
+      <DataCollection>
+        <Data Name="Группа 1" ParentGuid="" Guid="dd3760be-c933-41ec-a1d6-0839683a9c78" />
+        <Data Name="Группа 2" ParentGuid="" Guid="39949ae5-c298-4e0e-92a8-22a2651e5122" />
+        <Data Name="Группа 3" ParentGuid="" Guid="c9268e31-fdeb-45e8-ba14-7b974fa5083e" />
+      </DataCollection>
+    </Dictionary>
+  </Items>
+</Dictionary>
