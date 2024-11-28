@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Hooks>
+	<FieldsModify>
+		<SetField dst="|Document|Статус" value="Новый" />
+		<SetField dst="|Document|Редакция" value="1"/>
+	</FieldsModify>
+	 <FieldsModify source="Позиции плана закупок 223ФЗ">
+	 	<SetField dst="|Document|Родительский признак" value="true"/>
+        <SetField dst="|Document|Имя_потока" value="Поток 1" />
+        <CopyField src="|Document|ФИО_ответственного" />
+    </FieldsModify>
+	<OnDocumentCreated transaction="single">
+		<NamedConstants>     
+			<Setting key="IncrementedElementPath" value="|Document|Регистрационный_номер_1" />
+        	<Setting key="CounterNameFormat" value="({|Document|Имя_потока})" />
+    	</NamedConstants>
+    	<Aggregation>
+    	</Aggregation>
+    	<ConditionalActions>
+    	</ConditionalActions>
+	</OnDocumentCreated>
+	<OnRegcardEdited>			
+	</OnRegcardEdited>
+</Hooks>

@@ -209,7 +209,7 @@
                                                     <field fieldType="field" key="|Document|ФИО_ответственного" name="ФИО ответственного" isValue="true" valueType="text" edit-name="responsibleName" edit-readonly="true" edit-default-value="{currentUser}" />
                                                 </column>
                                                 <column>
-                                                    <field fieldType="field" key="|Document|Группа" name="Группа" isValue="true" valueType="addressbook" edit-name="responsibleGroup" edit-required="true" />
+                                                    <field fieldType="field" key="|Document|Группа" name="Группа" isValue="true" valueType="text" edit-name="group" edit-required="true" edit-tool="Группы" dict-column-name="Группы" />
                                                 </column>
                                             </row>
                                         </rows>

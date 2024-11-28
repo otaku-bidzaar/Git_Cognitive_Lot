@@ -20,7 +20,7 @@
       <E name="subheader" datatype="text" index="false" view="invisible" />
       <E displayname="Регистрационный номер" name="Регистрационный_номер_1" datatype="text" index="true" />
       <E name="Статус" datatype="text" index="true" edit="textbox" required="true" default="Новый" />
-      <E displayname="Дата создания" name="Дата_создания" datatype="date" index="true" default="nowdate()" />
+      <E displayname="Дата создания" name="Дата_создания" datatype="date" index="true" default="nowdate()" edit="" dfprotected="true" required="true" esp="false" />
       <E displayname="Редакция" name="Редакция" datatype="integer" index="true" />
       <E displayname="ФИО отвественного" name="ФИО_ответсвенного" datatype="text" index="true" />
       <E displayname="Группа" name="Группа" datatype="text" />
@@ -50,5 +50,7 @@
       <E name="Планируемый_год" datatype="integer" index="true" displayname="Планируемый год" />
     </S>
   </CONTENT_MODEL>
-  <plugins></plugins>
+  <plugins>
+      <dictionary name="Группы" progid="FrmTools.DictSource" inittime="field" initstring="stored:Группы" />
+  </plugins>
 </FORM_DESCRIPTION>
