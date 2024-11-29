@@ -29,6 +29,10 @@
 				<Rules>
 					<And>
 						<WhenHttpGetParamEquals param="searchBlock" value="Итоговое задание" />
+						<or>
+							<WhenUserInWorkGroup name="Менеджер закупки"/>
+							<WhenUserInWorkGroup name="Специалист технической поддержки"/>
+						</or>
 					</And>
 				</Rules>
 			</Visibility>
@@ -563,6 +567,20 @@
 							</Or>
 						</And>
 					</Or>
+				</Rules>
+			</Visibility>
+		</Button>
+
+		<Button name="Создать документ" displayName="Создать документ итогового задания">
+			<Action type="Register">
+				<FlowName value="Поток 1" />
+			</Action>
+			<Visibility>
+				<Rules>
+					<And>
+						<WhenFlow name="Заявка на размещение закупки 223ФЗ"/>
+						<!-- <WhenFieldEquals path="|Document|Сотрудник_департамента_закупок|Сотрудник_департамента_закупок" value="{currentUser}" /> -->
+					</And>
 				</Rules>
 			</Visibility>
 		</Button>

@@ -23,7 +23,8 @@
       <E displayname="Дата создания" name="Дата_создания" datatype="date" index="true" default="nowdate()" edit="" dfprotected="true" required="true" esp="false" />
       <E displayname="Редакция" name="Редакция" datatype="integer" index="true" />
       <E displayname="ФИО отвественного" name="ФИО_ответсвенного" datatype="text" index="true" />
-      <E displayname="Группа" name="Группа" datatype="text" />
+      <E displayname="Группа" name="Группа" datatype="integer" index="true" />
+      <E displayname="Группа наименование" name="Группа_наименование" datatype="text" index="true" />
       <E displayname="Дополнительная информация" name="Дополнительная_информация" datatype="longtext" index="true" />
       <E displayname="Логическое поле 1" name="Логическое_поле_1" datatype="boolean" index="true" />
       <E displayname="Стоимость" name="Стоимость" datatype="integer" index="true" />
@@ -46,11 +47,11 @@
       <E displayname="Дата 3" name="Дата_3" datatype="date" index="true" />
       <E displayname="Категория" name="Категория" datatype="text" index="true" />
       <E displayname="Комментарий" name="Комментарий" datatype="longtext" index="true" />
-      <E name="Родительский_признак" datatype="boolean" index="true" />
       <E name="Планируемый_год" datatype="integer" index="true" displayname="Планируемый год" />
+      <E name="ParentRK" datatype="text" index="true" />
     </S>
   </CONTENT_MODEL>
   <plugins>
-      <dictionary name="Группы" progid="FrmTools.DictSource" inittime="field" initstring="stored:Группы" />
+    <dictionary name="Группы" progid="FrmTools.DictSource" inittime="field" initstring="stored:Группы" />
   </plugins>
 </FORM_DESCRIPTION>

@@ -12,7 +12,7 @@
 										<rows>
 											<row>
 												<column>
-                                                    <field fieldType="field" key="|Document|Регистрационный_номер" name="Регистрационный номер" valueType="text" />
+                                                    <field fieldType="field" key="|Document|Регистрационный_номер_1" name="Регистрационный номер" valueType="text" />
                                                 </column>
                                                 <column>
                                                     <field fieldType="field" key="|Document|Дата_создания" name="Дата создания" valueType="date"/>
@@ -174,7 +174,7 @@
 										<rows>
 											<row>
 												<column>
-                                                    <field name="Регистрационный номер" isLabel="true" />
+                                                    <field name="Регистрационный номер" isLabel="true" edit-name="regNumber" />
                                                 </column>
                                                 <column>
                                                     <field name="Статус" isLabel="true" />
@@ -182,7 +182,7 @@
                                             </row>
                                             <row>
                                                 <column>
-                                                    <field fieldType="field" key="|Document|Регистрационный_номер" name="Регистрационный номер" isValue="true" valueType="text" edit-name="regNumber" edit-readonly="true" />
+                                                    <field fieldType="field" key="|Document|Регистрационный_номер_1" name="Регистрационный номер" isValue="true" valueType="text" edit-name="regNumber" edit-readonly="true" edit-default-value="1" />
                                                 </column>
                                                 <column>
                                                     <field fieldType="field" key="|Document|Статус" name="Статус" isValue="true" valueType="text" edit-name="status" edit-readonly="true" edit-default-value="Новый"/>
@@ -201,7 +201,7 @@
                                                     <field name="ФИО ответственного" isLabel="true" />
                                                 </column>
                                                 <column>
-                                                    <field name="Группа" isLabel="true" />
+                                                    <field name="Группа" isLabel="true" edit-name="group" />
                                                 </column>
                                             </row>
                                             <row>
@@ -209,8 +209,9 @@
                                                     <field fieldType="field" key="|Document|ФИО_ответственного" name="ФИО ответственного" isValue="true" valueType="text" edit-name="responsibleName" edit-readonly="true" edit-default-value="{currentUser}" />
                                                 </column>
                                                 <column>
-                                                    <field fieldType="field" key="|Document|Группа" name="Группа" isValue="true" valueType="text" edit-name="group" edit-required="true" edit-tool="Группы" dict-column-name="Группы" />
-                                                </column>
+									                <field fieldType="field" key="|Document|Группа" name="Группа" valueType="integer" isValue="true" edit-required="true" edit-name="group" dict-column-name="code" edit-tool = "Группы" edit-readonly="true" dict-edit-name="group" show-dict-column="true" />
+									                <field fieldType="field" key="|Document|Группа_наименование" name="Группа наименование" valueType="text"  isValue="true" edit-name="groupName" edit-required="true" edit-readonly="true" dict-column-name="Наименование" edit-hidden="true" display-field-part="true" dict-edit-name="groupName" dict-column-width-percentage="50" />
+								                </column>
                                             </row>
                                         </rows>
                                     </block>
@@ -361,8 +362,9 @@
 						<rows>			
 							<row>
 								<column>
-                                    <field fieldType="field" key="|Document|Дата_создания" name="Дата создания" isValue="true" valueType="date" edit-name="createDate" edit-readonly="true" edit-default-value="nowdate()"/>
+                                    <!-- <field fieldType="field" key="|Document|Дата_создания" name="Дата создания" isValue="true" valueType="date" edit-name="createDate" edit-readonly="true" edit-default-value="nowdate()" /> -->
                                     <field fieldType="field" key="|Document|Редакция" name="Редакция" isValue="true" valueType="integer" edit-name="redaction" edit-readonly="true" />
+                                    <field fieldType="field" key="|Document|ParentRK" name="ParentRK" valueType="text"  isValue="true" edit-name="ParentRK" edit-default-value="-1" />
                                 </column>
                             </row>
                         </rows>
